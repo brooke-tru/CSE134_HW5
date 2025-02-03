@@ -46,199 +46,200 @@
     </head>
 
     <body>
+        <main>
+            <h2>Sweet Treat Finder</h2>
+            <search>
+                <h3>Filter results</h3>
+            </search>
 
-        <h2>Sweet Treat Finder</h2>
-        <search>
-            <h3>Filter results</h3>
-        </search>
+            <hr>
+            <hello-world></hello-world>
+            <h1>Experiments</h1>
+            <a href="/home.html">Home</a>
 
-        <hr>
-        <hello-world></hello-world>
-        <h1>Experiments</h1>
-        <a href="/home.html">Home</a>
+            <h2>Code tag Experiment</h2>
+            <p>Here is a demonstration of using the <code>code</code> tag!</p>
 
-        <h2>Code tag Experiment</h2>
-        <p>Here is a demonstration of using the <code>code</code> tag!</p>
+            <h2>Media & Custom element demo</h2>
+                <picture>
+                    <source srcset="/media/cinnamoroll.jpg" media="(orientation: portrait)">
+                    <img src="/media/pompompurin.jpg" width="200" alt="pompompurin">
+                </picture>
 
-        <h2>Media & Custom element demo</h2>
-            <picture>
-                <source srcset="/media/cinnamoroll.jpg" media="(orientation: portrait)">
-                <img src="/media/pompompurin.jpg" width="200" alt="pompompurin">
-            </picture>
-
-            <my-matcha>My matcha!</my-matcha>
-            <my-matcha flavor="strawberry">My strawberry matcha!</my-matcha>
-            <my-matcha flavor="ube">My ube matcha!</my-matcha>
-            <my-matcha flavor="blueberry">My blueberry matcha!</my-matcha>
+                <my-matcha>My matcha!</my-matcha>
+                <my-matcha flavor="strawberry">My strawberry matcha!</my-matcha>
+                <my-matcha flavor="ube">My ube matcha!</my-matcha>
+                <my-matcha flavor="blueberry">My blueberry matcha!</my-matcha>
 
 
-        <hr>
-        <h2>iFrame Experiment</h2>
-        <iframe 
-            width="425" 
-            height="350" 
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-117.26798057556154%2C32.86256983871382%2C-117.20772743225099%2C32.88736725449067&amp;layer=mapnik">
-        </iframe>
+            <hr>
+            <h2>iFrame Experiment</h2>
+            <iframe 
+                width="425" 
+                height="350" 
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-117.26798057556154%2C32.86256983871382%2C-117.20772743225099%2C32.88736725449067&amp;layer=mapnik">
+            </iframe>
 
-        <hr>
+            <hr>
 
-        <h2>Video and Audio Experiment</h2>
-        <figure>
-            <figcaption>What does the fox say?</figcaption> 
-            <audio controls src="/media/RedFox-yiff2.mp3"></audio><br>
-            <a href="/media/RedFox-yiff2.mp3">Download Audio</a>
-        </figure>
+            <h2>Video and Audio Experiment</h2>
+            <figure>
+                <figcaption>What does the fox say?</figcaption> 
+                <audio controls src="/media/RedFox-yiff2.mp3"></audio><br>
+                <a href="/media/RedFox-yiff2.mp3">Download Audio</a>
+            </figure>
 
-        <video controls width="250">
-            <source src="/media/fox.mp4" type="video/mp4">
-            <a href="/media/fox.mp4">MP4 download</a>.
-        </video>
+            <video controls width="250">
+                <source src="/media/fox.mp4" type="video/mp4">
+                <a href="/media/fox.mp4">MP4 download</a>.
+            </video>
 
-        <hr>
+            <hr>
 
-        <h2>Select, optgroup, and option Experiments</h2>
-        <label for="found-select">How did you find me?:</label>
-        <select id="found-select">
-            <optgroup label="Sources">
-                <option>UCSD</option>
-                <option>TikTok</option>
-                <option>Friend</option>
-            </optgroup>
-        </select>
+            <h2>Select, optgroup, and option Experiments</h2>
+            <label for="found-select">How did you find me?:</label>
+            <select id="found-select">
+                <optgroup label="Sources">
+                    <option>UCSD</option>
+                    <option>TikTok</option>
+                    <option>Friend</option>
+                </optgroup>
+            </select>
 
-        <hr>
-        <h2>Ol, details, summary Experiment</h2>
-        <p>Ranking my favorite vacation destinations</p>
-        <ol>
-            <li>Japan</li>
-            <li>Hawaii</li>
-            <li>Costa Rica</li>
-        </ol>
+            <hr>
+            <h2>Ol, details, summary Experiment</h2>
+            <p>Ranking my favorite vacation destinations</p>
+            <ol>
+                <li>Japan</li>
+                <li>Hawaii</li>
+                <li>Costa Rica</li>
+            </ol>
 
-        <details>
-            <summary>Fun fact</summary>
-            I have another trip to Hawaii planned this year!
-        </details>
+            <details>
+                <summary>Fun fact</summary>
+                I have another trip to Hawaii planned this year!
+            </details>
 
-        <hr>
-        <h2>Form, fieldset, legend, input Experiment</h2>
-        <form>
-            <fieldset>
-                <legend>Choose your favorite dessert</legend>
+            <hr>
+            <h2>Form, fieldset, legend, input Experiment</h2>
+            <form>
+                <fieldset>
+                    <legend>Choose your favorite dessert</legend>
 
-                <input type="radio" id="boba" name="dessert" value="b">
-                <label for="boba">Boba</label>
+                    <input type="radio" id="boba" name="dessert" value="b">
+                    <label for="boba">Boba</label>
 
-                <input type="radio" id="icecream" name="dessert" value="i">
-                <label for="icecream">Icecream</label>
+                    <input type="radio" id="icecream" name="dessert" value="i">
+                    <label for="icecream">Icecream</label>
 
-                <input type="radio" id="cookie" name="dessert" value="c">
-                <label for="cookie">Cookie</label>
-            </fieldset>
-        </form>
-
-        <hr>
-        <h2>Datalist & textarea Experiment</h2>
-        <label for="socialmedia-choice">Choose your favorite social media platform:</label>
-        <input list="socialmedia-platforms" id="socialmedia-choice" name="socialmedia-choice">
-        <datalist id="socialmedia-platforms">
-            <option value="Tiktok"></option>
-            <option value="Instagram"></option>
-            <option value="Facebook"></option>
-            <option value="Snapchat"></option>
-        </datalist>
-        <br>
-        <label>Tell me who your favorite influencer or creator is:</label>
-        <textarea id="favInfluencer" name="favInfluencer">Brooke Truong...?</textarea>
-        
-        <hr>
-        <h2>Table & Description List Experiment</h2>
-        <table>
-            <caption>
-                My best selling products in January 
-            </caption>
-            <colgroup>
-                <col span="1" class="product">
-                <col span="2" class="description">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Category</th>
-                    <th scope="col">Commision</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">LIP STAYN</th>
-                    <td>Makeup</td>
-                    <td>20%</td>
-                </tr>
-                <tr>
-                    <th scope="row">Sunscreen</th>
-                    <td>Skincare</td>
-                    <td>20%</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th scope="row" colspan="2">Average Commission</th>
-                    <td>20%</td>
-                </tr>
-            </tfoot>
-        </table>
-        <template id="productRow">
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-            </tr>
-        </template>
-
-        <p>Description List version:</p>
-        <dl>
-            <dt>Sacheu Beauty Lip Stayn</dt>
-            <dd>Lip stain makeup item.</dd>
-
-            <dt><dfn>Roundlab Birch Juice Moisturizing Sunscreen</dfn></dt>
-            <dd>Korean Sunscreen in the skincare category</dd>
-
-            <dt><abbr>BOJ</abbr> (Beauty of Joseon) Sunscreen</dt>
-            <dd>Sunscreen in the skincare category</dd>
-        </dl>
-
-        <hr>
-
-        <h2>Blockquote Experiment</h2>
-        <p>Wanna start making money on TikTok? Here's some advice:</p>
-
-        <blockquote cite="https://blog.thecrowdfundingformula.com/how-to-sell-on-tiktok-shop/">
-            <p>Time-limited promotions are an effective wya to create a sense of urgency and drive quick sales on TikTok.</p>
-            <p>-Jasmine Khachatryan </p>
-        </blockquote>
-        <p>My critique on the article I linked above....</p>
-        <del>
-            <p>Host Giveaways and Contests</p>
-        </del>
-        <ins>
-            <p>Do NOT Host Giveaways and Contests</p>
-        </ins>
-        
-        <dialog>
-            <p>Click OK if you read my critique</p>
-            <form method="dialog">
-                <button>OK</button>
+                    <input type="radio" id="cookie" name="dessert" value="c">
+                    <label for="cookie">Cookie</label>
+                </fieldset>
             </form>
-        </dialog>
 
-        <p>Reload the page with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to make the dialog reappear.</p>
+            <hr>
+            <h2>Datalist & textarea Experiment</h2>
+            <label for="socialmedia-choice">Choose your favorite social media platform:</label>
+            <input list="socialmedia-platforms" id="socialmedia-choice" name="socialmedia-choice">
+            <datalist id="socialmedia-platforms">
+                <option value="Tiktok"></option>
+                <option value="Instagram"></option>
+                <option value="Facebook"></option>
+                <option value="Snapchat"></option>
+            </datalist>
+            <br>
+            <label>Tell me who your favorite influencer or creator is:</label>
+            <textarea id="favInfluencer" name="favInfluencer">Brooke Truong...?</textarea>
+            
+            <hr>
+            <h2>Table & Description List Experiment</h2>
+            <table>
+                <caption>
+                    My best selling products in January 
+                </caption>
+                <colgroup>
+                    <col span="1" class="product">
+                    <col span="2" class="description">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Commision</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">LIP STAYN</th>
+                        <td>Makeup</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sunscreen</th>
+                        <td>Skincare</td>
+                        <td>20%</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="2">Average Commission</th>
+                        <td>20%</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <template id="productRow">
+                <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </template>
 
-        <hr>
-        <h2>Canvas Experiment</h2>
-        <canvas width="100" height="100">
-            This is a purple square!
-        </canvas>
-        <h2>SVG Experiment <svg viewBox="0 0 10 10" x="100" width="100"><circle cx="5" cy="5" r="4"/></svg></h2>
+            <p>Description List version:</p>
+            <dl>
+                <dt>Sacheu Beauty Lip Stayn</dt>
+                <dd>Lip stain makeup item.</dd>
+
+                <dt><dfn>Roundlab Birch Juice Moisturizing Sunscreen</dfn></dt>
+                <dd>Korean Sunscreen in the skincare category</dd>
+
+                <dt><abbr>BOJ</abbr> (Beauty of Joseon) Sunscreen</dt>
+                <dd>Sunscreen in the skincare category</dd>
+            </dl>
+
+            <hr>
+
+            <h2>Blockquote Experiment</h2>
+            <p>Wanna start making money on TikTok? Here's some advice:</p>
+
+            <blockquote cite="https://blog.thecrowdfundingformula.com/how-to-sell-on-tiktok-shop/">
+                <p>Time-limited promotions are an effective wya to create a sense of urgency and drive quick sales on TikTok.</p>
+                <p>-Jasmine Khachatryan </p>
+            </blockquote>
+            <p>My critique on the article I linked above....</p>
+            <del>
+                <p>Host Giveaways and Contests</p>
+            </del>
+            <ins>
+                <p>Do NOT Host Giveaways and Contests</p>
+            </ins>
+            
+            <dialog>
+                <p>Click OK if you read my critique</p>
+                <form method="dialog">
+                    <button>OK</button>
+                </form>
+            </dialog>
+
+            <p>Reload the page with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to make the dialog reappear.</p>
+
+            <hr>
+            <h2>Canvas Experiment</h2>
+            <canvas width="100" height="100">
+                This is a purple square!
+            </canvas>
+            <h2>SVG Experiment <svg viewBox="0 0 10 10" x="100" width="100"><circle cx="5" cy="5" r="4"/></svg></h2>
+            </main>
         <script
         src="/src/lab.js">
         </script>
