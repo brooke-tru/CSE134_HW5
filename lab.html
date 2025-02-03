@@ -56,11 +56,20 @@
 
             <h2>Sweet Treat Finder</h2>
             <search>
-                <form action="./search/">
-                <label for="treat">Find a Sweet Treat</label>
-                <input type="search" id="treat" name="q">
-                <button type="submit">Search</button>
-                </form>
+                <label>
+                    Find a Sweet Treat
+                    <input type="search" id="query" />
+                  </label>
+                
+                  <section>
+                    <h3>Results:</h3>
+                    <ul id="results">
+                      <!-- search result content -->
+                    </ul>
+                    <output id="no-results">
+                      <!-- no results content -->
+                    </output>
+                  </section>
             </search>
     
             <hr>
