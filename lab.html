@@ -55,8 +55,8 @@
 
         <h2>Media & Custom element demo</h2>
             <picture>
-                <source srcset="/media/cinnamoroll.jpg" media="(orientation: portrait)"/>
-                <img src="/media/pompompurin.jpg" width=200vw height=200vh alt=""/>
+                <source srcset="/media/cinnamoroll.jpg" media="(orientation: portrait)">
+                <img src="/media/pompompurin.jpg" width="200" alt="pompompurin">
             </picture>
 
             <my-matcha>My matcha!</my-matcha>
@@ -78,12 +78,12 @@
         <h2>Video and Audio Experiment</h2>
         <figure>
             <figcaption>What does the fox say?</figcaption> 
-            <audio controls src="\media\RedFox-yiff2.mp3"></audio><br>
-            <a href="\media\RedFox-yiff2.mp3">Download Audio</a>
+            <audio controls src="/media/RedFox-yiff2.mp3"></audio><br>
+            <a href="/media/RedFox-yiff2.mp3">Download Audio</a>
         </figure>
 
         <video controls width="250">
-            <source src="/media/fox.mp4" type="video/mp4"/>
+            <source src="/media/fox.mp4" type="video/mp4">
             <a href="/media/fox.mp4">MP4 download</a>.
         </video>
 
@@ -119,13 +119,13 @@
             <fieldset>
                 <legend>Choose your favorite dessert</legend>
 
-                <input type="radio" id="boba" name="dessert" value="b"/>
+                <input type="radio" id="boba" name="dessert" value="b">
                 <label for="boba">Boba</label>
 
-                <input type="radio" id="icecream" name="dessert" value="i"/>
+                <input type="radio" id="icecream" name="dessert" value="i">
                 <label for="icecream">Icecream</label>
 
-                <input type="radio" id="cookie" name="dessert" value="c"/>
+                <input type="radio" id="cookie" name="dessert" value="c">
                 <label for="cookie">Cookie</label>
             </fieldset>
         </form>
@@ -133,7 +133,7 @@
         <hr>
         <h2>Datalist & textarea Experiment</h2>
         <label for="socialmedia-choice">Choose your favorite social media platform:</label>
-        <input list="socialmedia-platforms" id="socialmedia-choice" name="socialmedia-choice"/>
+        <input list="socialmedia-platforms" id="socialmedia-choice" name="socialmedia-choice">
         <datalist id="socialmedia-platforms">
             <option value="Tiktok"></option>
             <option value="Instagram"></option>
@@ -152,7 +152,7 @@
             </caption>
             <colgroup>
                 <col span="1" class="product">
-                <col span="2" class="description"/>
+                <col span="2" class="description">
             </colgroup>
             <thead>
                 <tr>
@@ -200,7 +200,7 @@
             <dd>Sunscreen in the skincare category</dd>
         </dl>
 
-        <hr\>
+        <hr>
         <hroup>
         <h2>Blockquote Experiment</h2>
         <p>Wanna start making money on TikTok? Here's some advice:</p>
@@ -227,12 +227,12 @@
         <p>Reload the page with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to make the dialog reappear.</p>
     
         <hr>
-        <h2>Search Experiment <svg viewBox="0 0 10 10" x="100" width="100"><circle cx="5" cy="5" r="4"/></circle></svg></h2>
+        <h2>Search Experiment <svg viewBox="0 0 10 10" x="100" width="100"><circle cx="5" cy="5" r="4"/></svg></h2>
         <h3>Sweet Treat Finder</h3>
         <search>
             <form action="./search/">
                 <label for="dessert">Find a Sweet Treat</label>
-                <input type="search" id="dessert" name="q"/>
+                <input type="search" id="dessert" name="q">
                 <button type="submit">Search</button>
             </form>
             
@@ -243,13 +243,9 @@
             This is a purple square!
         </canvas>
 
-    
-
         <script
         src="/src/lab.js">
         </script>
     </body>
-    <footer>
 
-    </footer>
 </html>
