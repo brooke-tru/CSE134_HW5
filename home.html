@@ -5,46 +5,55 @@
         <meta charset="UTF-8">
         <meta name="description" content="Brooke Truong's Portfolio">
         <meta name="author" content="Brooke Truong">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
         <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+        <link rel="stylesheet" href="/src/home.css">
     </head>
     <body>
         <noscript>Please enable JavaScript to interact with this page!</noscript>
-        <header>
-            <hgroup>
-                <h1>Brooke Truong's Personal Portfolio</h1>
-                <p>Welcome to my portfolio!</p>
-            </hgroup>
-
-        </header>
-
-        <section>
-            <h2>Navigation</h2>
-            <nav class="menu">
+        
+        <header class="myHeader" id="myHeader">
+            <h1>Brooke Truong's Personal Portfolio</h1>
+            <nav class="navMenu" id="myNavMenu">
                 <ul>
-                    <li><a href="/lab.html">Lab Page</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Me</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#welcomeSection">Home</a></li>
+                    <li><a href="#aboutMeSection">About Me</a></li>
+                    <li><a href="#contactSection">Contact</a></li>
                 </ul>
             </nav>
-        </section>
+        </header>
+
         <hr>
         <main>
-            <section>
-                <h2>About me</h2>
+            <section id="welcomeSection">
+                <h2>Welcome to Brooke's Portfolio</h2>
+            </section>
+            <section id="aboutMeSection">
+                <h2 >About me</h2>
                 <h3>Education</h3>
                 <p>
-                    
+                    4th Year CS Undergraduate Student at UC San Diego
                 </p>
                 <h3>Work: Influencer</h3>
-                <img src="/media/tiktok.jpg"
+                <img id="tiktokLogo" src="/media/tiktok.jpg"
                     alt="Tiktok logo">
                 <p>
                     I earn commission from <b>TikTok</b> users that buy products through my videos.<br>
                     I specialize in promoting <i>beauty and skincare</i> products but still promote other types as well.<br>
                     If you have a product that you're interested in promoting, then <strong>let's collaborate!</strong>
                 </p>
-                
+
+                <h4>Brands that I've worked with</h4>
+                <ul>
+                    <li>Round Lab</li>
+                    <li>Judydoll</li>
+                    <li>Yesstyle</li>
+                </ul>
+                <img class="brands" id="roundlab" src="/media/roundlab.webp" alt="Roundlab logo" width="50">
+                <img class="brands" id="Judydoll" src="/media/judydoll.webp" alt="Judydoll Logo" width="50">
+                <img class="brands" id="yesstyle" src="/media/yesstyle.webp" alt="Yesstyle Logo" width="50">
+
+
                 <h4>January Statistics</h4>
                 <ul>
                     <li>Top <em>20%</em> of Tiktok creators </li>
@@ -52,6 +61,8 @@
                     <li>Items sold: 1.2k</li>
                     <li>Product Views: 1.2M</li>
                 </ul>
+
+
 
 
                 <div class="funfact">
@@ -64,22 +75,22 @@
 
             <hr>
 
-            <section>
+            <section id="contactSection">
                 <h2>Contact</h2>
-                <p>University related</p>
-                <p>Social Media related</p>
+                <p>University related:</p>
+                <address>
+                    <a href="bmtruong@ucsd.edu">bmtruong@ucsd.edu</a>
+                </address>
+                <p>Social Media related:</p>
+                <address>
+                    <a href="btiktokfinds@gmail.com">btiktokfinds@gmail.com</a>
+                </address>
             </section>
         </main>
 
         <script
             src="/src/home.js">
         </script>
-    
-    <footer>
-        <pre>Let's Collaborate:</pre>
-        <address>
-            <a href="bmtruong@ucsd.edu">bmtruong@ucsd.edu</a>
-        </address>
-    </footer>
+
     </body>
 </html>
