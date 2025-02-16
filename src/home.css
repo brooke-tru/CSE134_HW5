@@ -281,16 +281,16 @@ h4:has(+ ul) {
 /* Desktops */
 @media (min-width: 1025px) {
     h1,h2 {
-        font-size: 60px;
+        font-size: 50px;
     }
     h3 {
-        font-size:50px;
+        font-size:40px;
     }
     h4 {
-        font-size: 45px
+        font-size: 35px
     }
     p,li,a,aside {
-        font-size: 40px;
+        font-size: 30px;
     }
     .brands {
         padding: 15px;
