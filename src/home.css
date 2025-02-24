@@ -207,6 +207,7 @@ h4:has(+ ul) {
         "header header"
         "p1 address1"
         "p2 address2"
+        "form form"
     ;
     row-gap: 20px;
     padding: 30px;
@@ -216,18 +217,49 @@ h4:has(+ ul) {
     grid-area: header;
 }
 
+form {
+    grid-area: form;
+    border: solid;
+    border-color: pink;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    background: var(--lightVanilla, beige);
+    align-items: center;
+}
+
+.required {
+    color: red;
+}
+
+fieldset {
+    border:none;
+}
+
+#submitBtn {
+    border-radius: 5px;
+    border-color: pink;
+    color:black;
+    background-color: white;
+}
+
+#submitBtn:hover {
+    background-color: var(--parrotPink, pink);
+    color:white;
+}
+
 
 /* Mobile (Phones) */
 @media (max-width: 600px) {
     h1 {
-        font-size: 20px;
+        font-size: 15px;
     }
     h2 {
-        font-size: 40px;
+        font-size: 20px;
     }
 
     p,li {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .brands {
@@ -244,21 +276,29 @@ h4:has(+ ul) {
         background-color: var(--colorMixed, pink);
         padding: 10px 50px;
     }
+
+    form {
+        padding:15px;
+    }
+
+    #submitBtn {
+        padding: 10px;
+    }
 }
 
 /* Tablets / Small Laptops */
 @media (min-width: 601px) and (max-width: 1024px) {
     h1,h2 {
-        font-size: 50px;
+        font-size: 45px;
     }
     h3 {
-        font-size:40px;
+        font-size:35px;
     }
     h4 {
-        font-size: 35px
+        font-size: 30px
     }
-    p,li,a,aside {
-        font-size: 30px;
+    p,li,a,aside, form, input, button {
+        font-size: 25px;
     }
     .brands {
         padding: 15px;
@@ -276,21 +316,28 @@ h4:has(+ ul) {
     .brands {
         width: 100px;
     }
+    form {
+        padding:25px;
+    }
+
+    #submitBtn {
+        padding: 15px;
+    }
 }
 
 /* Desktops */
 @media (min-width: 1025px) {
     h1,h2 {
-        font-size: 50px;
+        font-size: 45px;
     }
     h3 {
-        font-size:40px;
+        font-size:35px;
     }
     h4 {
-        font-size: 35px
+        font-size: 30px
     }
-    p,li,a,aside {
-        font-size: 30px;
+    p,li,a,aside,form, input, button {
+        font-size: 25px;
     }
     .brands {
         padding: 15px;
@@ -308,6 +355,13 @@ h4:has(+ ul) {
 
     .brands {
         width: 200px;
+    }
+    form {
+        padding:25px;
+    }
+
+    #submitBtn {
+        padding: 15px;
     }
 }
 
