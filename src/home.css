@@ -1,5 +1,6 @@
 :root {
     --lightVanilla: #fff4f0;
+    --darkVanilla: #e3d6d2;
     --darkVanilla: #eee3df;
     --parrotPink: #D4949D;
     --libertyBlue: rgb(92,99,164);
@@ -81,6 +82,17 @@
     width: 100vw;
     position: fixed;
     background-color:var(--darkVanilla, beige);
+    padding-bottom: 5px;
+}
+
+#darkmode {
+    height: 15px;
+    width: 15px;
+}
+
+.darkmode {
+    background-color: black;
+    color:var(--parrotPink);
 }
 
 h1 {
@@ -124,7 +136,6 @@ h4, p, li, address, aside {
 }
 
 /*Welcome Section*/
-
 
 #welcomeSection {
     height: 100vh;
@@ -228,6 +239,14 @@ form {
     align-items: center;
 }
 
+input:user-invalid {
+    border: 2px dashed red;
+}
+
+input:valid {
+    border: 2px solid black;
+}
+
 .required {
     color: red;
 }
@@ -248,6 +267,23 @@ fieldset {
     color:white;
 }
 
+.error {
+    width: 100%;
+    padding: 0;
+  
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+  
+    box-sizing: border-box;
+  }
+  
+  .error.active {
+    padding: 0.3em;
+  }
+
+
 
 /* Mobile (Phones) */
 @media (max-width: 600px) {
@@ -260,6 +296,9 @@ fieldset {
 
     p,li {
         font-size: 15px;
+    }
+    output {
+        font-size:10px;
     }
 
     .brands {
@@ -300,6 +339,9 @@ fieldset {
     p,li,a,aside, form, input, button {
         font-size: 25px;
     }
+    output {
+        font-size:18px;
+    }
     .brands {
         padding: 15px;
     }
@@ -338,6 +380,9 @@ fieldset {
     }
     p,li,a,aside,form, input, button {
         font-size: 25px;
+    }
+    output {
+        font-size:18px;
     }
     .brands {
         padding: 15px;

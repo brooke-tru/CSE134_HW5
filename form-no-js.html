@@ -9,10 +9,10 @@
         <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
         <link rel="stylesheet" href="/src/home.css">
     </head>
-    <body class="lightmode">
+    <body>
         <noscript>Please enable JavaScript to interact with this page!</noscript>
         
-        <header class="myHeader lightmode" id="myHeader">
+        <header class="myHeader" id="myHeader">
             <h1>Brooke Truong's Personal Portfolio</h1>
             <nav class="navMenu" id="myNavMenu">
                 <ul>
@@ -20,10 +20,6 @@
                     <li><a href="#aboutMeSection">About Me</a></li>
                     <li><a href="#contactSection">Contact</a></li>
                 </ul>
-                <p>
-                    <label for="darkmode">Enable Dark Mode:</label>
-                    <input type="checkbox" name="darkmode" id="darkmodeToggle">
-                </p>
             </nav>
         </header>
 
@@ -32,7 +28,6 @@
             <section id="welcomeSection">
                 <h2>Welcome to Brooke's Portfolio</h2>
             </section>
-
             <section id="aboutMeSection">
                 <h2 >About me</h2>
                 <h3>Education</h3>
@@ -91,37 +86,30 @@
                     <a href="btiktokfinds@gmail.com">btiktokfinds@gmail.com</a>
                 </address>
 
-                <form action="https://httpbin.org/post" method="POST" id="contactForm">
+                <form action="https://httpbin.org/post" method="POST">
                     <h2>Contact Form</h2>
                     <br>
                     <fieldset>
                         <label for="name">Name<span class="required">*</span>:</label>
                         <input type="text" id="name" name="name" required autofocus>
-                        <br>
-                        <output name="nameError" id="nameError" class="error" for="name"></output>
+                        <output name="nameError" class="error" for="name"></output>
                         <output name="nameInfo" class="info" for="name"></output>
                     </fieldset>
                     <br>
                     <fieldset>
-                            <label for="email">Email<span class="required">*</span>:</label>
-                            <input type="email" id="email" name="email" required>
-                            <br>
-                            <output name="emailError" id="emailError" class="error" for="email"></output>
-                            <output name="emailInfo" class="info" for="email"></output>
+                        <label for="email">Email<span class="required">*</span>:</label>
+                        <input type="email" id="email" name="email" required>
+                        <output name="emailError" class="error" for="email"></output>
+                        <output name="emailInfo" class="info" for="email"></output>
                     </fieldset>
                     <br>
                     <fieldset>
                         <label for="comments">Comments:</label>
-                        <textarea id="comments" name="comments" maxlength="150"></textarea>
-                        <br>
-                        <output name="commentsError" id="commentsError" class="error" for="comments"></output>
-                        <output name="commentsInfo" id="commentsInfo" class="info" for="comments"></output>
+                        <textarea id="comments" name="comments"></textarea>
+                        <output name="commentsError" class="error" for="comments"></output>
+                        <output name="commentsInfo" class="info" for="comments"></output>
                     </fieldset>
                     <br>
-                    <fieldset>
-                        <input type="hidden" name="form-errors" id="form-errors" value="">
-                    </fieldset>
-
                     <input type="hidden" name="possible_bot" value="true">
                     <button type="submit" id="submitBtn">Submit</button>
                 </form>
