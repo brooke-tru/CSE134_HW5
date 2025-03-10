@@ -1,15 +1,15 @@
 [
     {
-        "title": "Round Lab Sunscreen",
+        "title": "Round Lab",
         "image": "media/roundlab.webp",
-        "description": "Round Lab Sunscreen",
+        "description": "Korean skincare company",
         "link": "https://roundlab.com",
         "linkName": "Round Lab Website"
     },
     {
-        "title": "Judydoll Watery Lip Gloss",
+        "title": "Judydoll",
         "image": "media/judydoll.webp",
-        "description": "Judydoll Watery Lip Gloss",
+        "description": "Chinese makeup company",
         "link": "https://judydoll.com",
         "linkName": "Judydoll website"
     }
