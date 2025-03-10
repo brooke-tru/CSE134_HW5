@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Round Lab Sunscreen",
+        "image": "media/roundlab.webp",
+        "description": "Round Lab Sunscreen",
+        "link": "https://roundlab.com",
+        "linkName": "Round Lab Website"
+    },
+    {
+        "title": "Judydoll Watery Lip Gloss",
+        "image": "media/judydoll.webp",
+        "description": "Judydoll Watery Lip Gloss",
+        "link": "https://judydoll.com",
+        "linkName": "Judydoll website"
+    }
+]
