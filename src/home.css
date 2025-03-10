@@ -207,6 +207,18 @@ h4:has(+ ul) {
     color: var(--bleuDeFrance, black);
 }
 
+#load-local, #load-remote {
+    margin: 5px;
+    padding: 5px;
+    background-color: var(--thistlePink);
+    border: 2px solid var(--parrotPink);
+    border-radius: 5px;
+}
+
+#load-local:hover, #load-remote:hover {
+    background-color: var(--parrotPink);
+}
+
 #projectcard-container {
     margin:auto;
     display: flex;
