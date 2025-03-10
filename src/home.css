@@ -1,6 +1,5 @@
 :root {
     --lightVanilla: #fff4f0;
-    --darkVanilla: #e3d6d2;
     --darkVanilla: #eee3df;
     --parrotPink: #D4949D;
     --libertyBlue: rgb(92,99,164);
@@ -207,6 +206,17 @@ h4:has(+ ul) {
     padding: 1rem;
     color: var(--bleuDeFrance, black);
 }
+
+#projectcard-container {
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;         
+    justify-content: center;
+    padding: 1rem;
+    width: 90%;       
+}
+
 
 /*--------------------------*/
 /*Contact Section*/
