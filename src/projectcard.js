@@ -90,18 +90,22 @@ class ProjectCard extends HTMLElement {
 
 customElements.define('project-card', ProjectCard);
 
-async function loadProjects() {
+async function loadProjectsRemote() {
     const projectCardContainer = document.getElementById("projectcard-container");
-    let projects = JSON.parse(localStorage.getItem("projects"));
+    projectCardContainer.innerHTML = '';
 
-    try {
-        const response = await fetch("projects.json");
-        const data = await response.json();
-        ///... syntax expands an array 
-        projects = [...projects, ...data]
-    } catch (error) {
-        console.error("Error loading projects");
-    }
+   let projects = [];
+   try{
+        const response = await fetch("https://api.jsonbin.io/v3/b/67cf65e68a456b7966736c0a", {
+            headers:{ 
+                'X-Master-Key': "$2a$10$GbE3WnmlvsCV4RSLorx8LewJxyGtgT1g825ghGXvNEVzPL76zWxi6"
+              }
+        });
+        const jsonResponse = await response.json();
+        projects = jsonResponse.record;
+   } catch (error) {
+    console.error("Error loading projects");
+   }
 
     projects.forEach(element => {
         const projectCard = document.createElement("project-card");
@@ -114,14 +118,52 @@ async function loadProjects() {
     });
 }
 
+async function loadProjectsLocal() {
+    const projectCardContainer = document.getElementById("projectcard-container");
+    projectCardContainer.innerHTML = '';
+    let projects = JSON.parse(localStorage.getItem("projects"));
+
+    projects.forEach(element => {
+        const projectCard = document.createElement("project-card");
+        projectCard.setAttribute("title", element.title);
+        projectCard.setAttribute("image", element.image);
+        projectCard.setAttribute("description", element.description);
+        projectCard.setAttribute("link", element.link);
+        projectCard.setAttribute("linkName", element.linkName)
+        projectCardContainer.appendChild(projectCard);
+    });
+}
+
+/*Part 1 using Local storage*/
 localStorage.setItem("projects", JSON.stringify([
     {
-        "title": "Yesstyle",
-        "image": "media/yesstyle.webp",
-        "description": "Asian e-commerce company for beauty and fashion",
-        "link": "https://yesstyle.com",
-        "linkName": "Yesstyle website"
+        "title": "r.e.m. beauty",
+        "image": "media/rem_beauty_logo.webp",
+        "description": "Beauty company by Ariana Grande",
+        "link": "https://rembeauty.com",
+        "linkName": "r.e.m. website"
+    },
+    {
+        "title": "Round Lab",
+        "image": "media/roundlab.webp",
+        "description": "Korean skincare company",
+        "link": "https://roundlab.com",
+        "linkName": "Round Lab Website"
+    },
+    {
+        "title": "Judydoll",
+        "image": "media/judydoll.webp",
+        "description": "Chinese makeup company",
+        "link": "https://judydoll.com",
+        "linkName": "Judydoll website"
     }
 ]));
 
-document.addEventListener("DOMContentLoaded", loadProjects);
+
+document.addEventListener("DOMContentLoaded", loadProjectsLocal);
+
+const loadRemoteBtn = document.getElementById("load-remote");
+const loadLocalBtn = document.getElementById("load-local");
+
+loadRemoteBtn.addEventListener("click", loadProjectsRemote);
+loadLocalBtn.addEventListener("click", loadProjectsLocal);
