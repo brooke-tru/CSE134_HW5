@@ -21,7 +21,7 @@
                     <li><a href="#contactSection">Contact</a></li>
                 </ul>
                 <p>
-                    <label for="darkmode">Enable Dark Mode:</label>
+                    <label for="darkmodeToggle">Enable Dark Mode:</label>
                     <input type="checkbox" name="darkmode" id="darkmodeToggle">
                 </p>
             </nav>
@@ -129,7 +129,11 @@
                 </form>
             </section>
         </main>
-
+        <script type="module">
+            if (navigator && navigator.serviceWorker) {
+                navigator.serviceWorker.register('sw.js');
+            }
+        </script>
         <script
             src="/src/home.js">
         </script>
