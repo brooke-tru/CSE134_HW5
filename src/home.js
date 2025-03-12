@@ -98,7 +98,7 @@ submitBtn.addEventListener("click", function (event) {
 /*Dark Mode*/
 const body = document.body;
 const darkmodeToggle = document.getElementById("darkmodeToggle");
-const darkmodeText = document.querySelector("label[for=darkmode]");
+const darkmodeText = document.querySelector("label[for=darkmodeToggle]");
 const theme = localStorage.getItem("theme");
 
 if (theme){
