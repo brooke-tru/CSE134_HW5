@@ -134,6 +134,11 @@ h4, p, li, address, aside {
     padding-right: 25px;
 }
 
+.navOption {
+    text-decoration: none;
+}
+
+
 /*Welcome Section*/
 
 #welcomeSection {
