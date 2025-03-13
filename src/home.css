@@ -1,10 +1,63 @@
 :root {
+    /*Colors*/
     --lightVanilla: #fff4f0;
     --darkVanilla: #eee3df;
     --parrotPink: #D4949D;
+    --darkPink: #c2737f;
     --libertyBlue: rgb(92,99,164);
     --thistlePink: color-mix(in srgb, beige, rgb(222 193 219));
     --bleuDeFrance: color(srgb 0.18 0.5 0.89);
+
+    /*Header sizing*/
+    --headerWidth: 100vw;
+    --headerPaddingBottom: 5px;
+    --darkModeHeight: 15px;
+    --darkModeWidth: 15px;
+
+    /*Font sizes*/
+    --h1fontSize: 26px;
+    --h2fontSize: 24px;
+    --h3fontSize: 22px;
+    --h4fontSize: 20px;
+    --pfontSize: 18px;
+
+    --h1fontSizeMobile: 20px;
+    --h2fontSizeMobile: 18px;
+    --h3fontSizeMobile: 16px;
+    --h4fontSizeMobile: 14px;
+    --pfontSizeMobile: 12px;
+
+    /*Nav Menu*/
+    --navPadding: 0.8rem;
+    --navOptionPadding: 2rem;
+    --navOptionBorderRadius: 5px;
+
+    /*Welcome Section*/
+    --welcomeHeight: 100vh;
+    --welcomeWidth: 100vw;
+    --welcomeTextPaddingTB: 5rem;
+    --welcomeTextPaddingLR: 10rem;
+    --welcomeTextBorderSize: 0.5rem;
+
+    /*About Me Section*/
+    --aboutMePadding: 1rem;
+    --loadBtnMargin: 0.8rem;
+    --loadBtnPadding: 0.8rem;
+    --loadBtnBorderSize: 3px;
+    --loadBtnBorderRadius: 5px;
+    --projectCardContainerGapSize: 1rem;
+    --projectCardContainerPadding: 1rem;
+    --projectCardContainerWidth: 90%;
+
+    /*Contact Section*/
+    --contactSectionRowGap: 1rem;
+    --contactSectionPadding: 1rem;
+    --formBorderRadius: 5px;
+    --formPaddingTB: 2rem;
+    --formPaddingLR: 10rem;
+    --inputBorderRadius: 2px;
+    --submitBtnPadding: 0.8rem;
+    --submitBtnBorderRadius: 5px;
 }
 
 /* Regular */
@@ -78,15 +131,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100vw;
+    width: var(--headerWidth);
     position: fixed;
     background-color:var(--darkVanilla, beige);
-    padding-bottom: 5px;
+    padding-bottom: var(--headerPaddingBottom);
 }
 
 #darkmode {
-    height: 15px;
-    width: 15px;
+    height: var(--darkModeHeight);
+    width: var(--darkModeWidth);
 }
 
 .darkmode {
@@ -97,19 +150,22 @@
 h1 {
     padding-top: 2rem;
     color: var(--libertyBlue, black);
-    font-size: 22px;
+    font-size: var(--h1fontSize);
 }
 
 h2 {
-    font-size: 22px;
+    font-size: var(--h2fontSize);
 }
 
-h3 {
-    font-size: 18px;
+h3, .navOption {
+    font-size: var(--h3fontSize);
 }
 
-h4, p, li, address, aside {
-    font-size: 18px;
+h4 {
+    font-size: var(--h4fontSize);
+}
+p, li, address, aside, #darkmodeText, output, button, input, output, textarea {
+    font-size: var(--pfontSize);
 }
 
 #myNavMenu ul {
@@ -117,34 +173,31 @@ h4, p, li, address, aside {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+
 }
 
-#myNavMenu ul li {
+#myNavMenu ul {
     list-style-type: none;
-    padding: 5% 5%;
-    transition: width 2s, background-color 0.5s ease-in-out;
-    font-size: 18px;
-    padding: 20px;
-}
-
-#myNavMenu ul li:hover {
-    background-color: var(--colorMixed, pink);
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: var(--navPadding);
 }
 
 .navOption {
+    padding: 0 var(--navOptionPadding);
     text-decoration: none;
     color: var(--libertyBlue, black);
 }
 
+.navOption:hover {
+    background-color: var(--colorMixed, pink);
+    padding: 0 var(--navOptionPadding);
+    border-radius: var(--navOptionBorderRadius);
+}
 
 /*Welcome Section*/
 
 #welcomeSection {
-    height: 100vh;
-    width: 100vw;
+    height: var(--welcomeHeight);
+    width: var(--welcomeWidth);
     display: flex;
     justify-content: center;
     align-items: center;      
@@ -152,9 +205,8 @@ h4, p, li, address, aside {
 }
 
 #welcomeSection h2 {
-    width: 60vw;    
-    padding: 50px;          
-    border: 10px solid var(--libertyBlue, black);
+    padding: var(--welcomeTextPaddingTB) var(--welcomeTextPaddingLR);      
+    border: var(--welcomeTextBorderSize) solid var(--libertyBlue, black);
     background-color: var(--darkVanilla, beige);  
     color: var(--libertyBlue, black); 
 }
@@ -173,55 +225,51 @@ h4, p, li, address, aside {
 }
 
 #aboutMeSection {
-    height: 90%;
-    width: 100%;
-    padding-bottom: 50px;
+    padding: var(--aboutMePadding);
 }
 
-#aboutMeSection h2, 
-#aboutMeSection h3,
-#aboutMeSection p {
-    padding: 20px;
+#aboutMeSection h2 {
     color: var(--libertyBlue, black);
+    padding: var(--aboutMePadding);
+} 
+#aboutMeSection h3 {
+    color: var(--darkPink, black);
+    padding: var(--aboutMePadding);
 }
-
-
+#aboutMeSection p {
+    padding: var(--aboutMePadding);
+    color: black;
+}
 #aboutMeSection ul li {
-    list-style-type: none;
-    padding: 10px;
+    padding: var(--aboutMePadding);
 }
 
 #aboutMeSection aside {
-    padding: 10px;
+    padding: var(--aboutMePadding);
 }
 
 #tiktokLogo {
     animation-name: bounce;
     animation-iteration-count: infinite;
     animation-duration: 2s;
-    padding: 20px;
-    position:relative;
+    padding: var(--aboutMePadding);
+    position: relative;
     z-index: -1;
 }
 
-.brands {
-    padding: 20px 50px;
+#brandsHeader {
+    color: var(--bleuDeFrance);
 }
 
-h4:has(+ ul) {
-    padding: 1rem;
-    color: var(--bleuDeFrance, black);
-}
-
-#load-local, #load-remote {
-    margin: 5px;
-    padding: 5px;
+button.loadBtns {
+    margin: var(--loadBtnMargin);
+    padding: var(--loadBtnPadding);
     background-color: var(--thistlePink);
-    border: 2px solid var(--parrotPink);
-    border-radius: 5px;
+    border: var(--loadBtnBorderSize) solid var(--parrotPink);
+    border-radius: var(--loadBtnBorderRadius);
 }
 
-#load-local:hover, #load-remote:hover {
+button.loadBtns:hover {
     background-color: var(--parrotPink);
 }
 
@@ -229,10 +277,10 @@ h4:has(+ ul) {
     margin:auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;         
+    gap: var(--projectCardContainerGapSize);         
     justify-content: center;
-    padding: 1rem;
-    width: 90%;       
+    padding: var(--projectCardContainerPadding);
+    width: var(--projectCardContainerWidth);       
 }
 
 
@@ -248,8 +296,8 @@ h4:has(+ ul) {
         "p2 address2"
         "form form"
     ;
-    row-gap: 20px;
-    padding: 30px;
+    row-gap: var(--contactSectionRowGap);
+    padding: var(--contactSectionPadding);
 }
 
 #contactSection h2 {
@@ -260,7 +308,9 @@ form {
     grid-area: form;
     border: solid;
     border-color: pink;
-    border-radius: 5px;
+    margin: auto;
+    border-radius: var(--formBorderRadius);
+    padding:var(--formPaddingTB) var(--formPaddingLR);
     display:flex;
     flex-direction: column;
     background: var(--lightVanilla, beige);
@@ -268,11 +318,11 @@ form {
 }
 
 input:user-invalid {
-    border: 2px dashed red;
+    border: var(--inputBorderRadius) dashed red;
 }
 
 input:valid {
-    border: 2px solid black;
+    border: var(--inputBorderRadius) solid black;
 }
 
 .required {
@@ -284,7 +334,8 @@ fieldset {
 }
 
 #submitBtn {
-    border-radius: 5px;
+    padding: var(--submitBtnPadding);
+    border-radius: var(--submitBtnBorderRadius);
     border-color: pink;
     color:black;
     background-color: white;
@@ -316,31 +367,29 @@ fieldset {
 /* Mobile (Phones) */
 @media (max-width: 600px) {
     h1 {
-        font-size: 15px;
+        font-size: var(--h1fontSizeMobile);
     }
     h2 {
-        font-size: 20px;
+        font-size: var(--h2fontSizeMobile);
     }
-
-    p,li {
-        font-size: 15px;
+    h3, .navOption {
+        font-size: var(--h3fontSizeMobile);
     }
-    output {
-        font-size:10px;
+    h4 {
+        font-size: var(--h4fontSizeMobile);
+    }
+    p, li, address, aside, #darkmodeText, output {
+        font-size: var(--pfontSizeMobile);
     }
 
     .brands {
         padding: 15px;
     }
-    #myNavMenu ul {
-        padding: 10px;
-        justify-content: space-between;
-    }
+
     #myNavMenu ul li {
         padding: 10px 15px;
     }
     #myNavMenu ul li:hover {
-        background-color: var(--colorMixed, pink);
         padding: 10px 50px;
     }
 
@@ -355,32 +404,28 @@ fieldset {
 
 /* Tablets / Small Laptops */
 @media (min-width: 601px) and (max-width: 1024px) {
-    h1,h2 {
-        font-size: 45px;
+    h1 {
+        font-size: var(--h1fontSize);
     }
-    h3 {
-        font-size:35px;
+    h2 {
+        font-size: var(--h2fontSize);
+    }
+    h3, .navOption {
+        font-size:var(--h3fontSize);
     }
     h4 {
-        font-size: 30px
+        font-size: var(--h4fontSize);
     }
-    p,li,a,aside, form, input, button {
-        font-size: 25px;
-    }
-    output {
-        font-size:18px;
+    p, li, address, aside, #darkmodeText, output {
+        font-size: var(--pfontSize);
     }
     .brands {
         padding: 15px;
-    }
-    #myNavMenu ul {
-        padding: 10px;
     }
     #myNavMenu ul li {
         padding: 10px 70px;
     }
     #myNavMenu ul li:hover {
-        background-color: var(--colorMixed, pink);
         padding: 10px 100px;
     }
     .brands {
@@ -389,53 +434,10 @@ fieldset {
     form {
         padding:25px;
     }
-
     #submitBtn {
         padding: 15px;
     }
 }
 
-/* Desktops */
-@media (min-width: 1025px) {
-    h1,h2 {
-        font-size: 45px;
-    }
-    h3 {
-        font-size:35px;
-    }
-    h4 {
-        font-size: 30px
-    }
-    p,li,a,aside,form, input, button {
-        font-size: 25px;
-    }
-    output {
-        font-size:18px;
-    }
-    .brands {
-        padding: 15px;
-    }
-    #myNavMenu ul {
-        padding: 20px;
-    }
-    #myNavMenu ul li {
-        padding: 10px 70px;
-    }
-    #myNavMenu ul li:hover {
-        background-color: var(--colorMixed, pink);
-        padding: 10px 100px;
-    }
-
-    .brands {
-        width: 200px;
-    }
-    form {
-        padding:25px;
-    }
-
-    #submitBtn {
-        padding: 15px;
-    }
-}
 
 
