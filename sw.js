@@ -2,8 +2,7 @@
 
 const URLS_TO_CACHE = [
     '/',
-    //'/home.html',
-    '/offline.html',
+    '/home.html',
     '/src/home.css',
     '/src/home.js',
     '/src/projectcard.js',
