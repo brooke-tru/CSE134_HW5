@@ -11,7 +11,7 @@
     --darkModePColor: #f7e8ea;
 
     /*Header sizing*/
-    --headerWidth: 100vw;
+    --headerWidth: 100%;
     --headerPaddingBottom: 5px;
     --darkModeHeight: 15px;
     --darkModeWidth: 15px;
@@ -32,13 +32,14 @@
     /*Nav Menu*/
     --navPadding: 0.8rem;
     --navOptionPadding: 2rem;
+    --navOptionPaddingMobile: 1rem;
     --navOptionBorderRadius: 5px;
 
     /*Welcome Section*/
     --welcomeHeight: 100vh;
-    --welcomeWidth: 100vw;
+    --welcomeWidth: 100%;
     --welcomeTextPaddingTB: 5rem;
-    --welcomeTextPaddingLR: 10rem;
+    --welcomeTextPaddingLR: 5rem;
     --welcomeTextBorderSize: 0.5rem;
 
     /*About Me Section*/
@@ -50,13 +51,16 @@
     --projectCardContainerGapSize: 1rem;
     --projectCardContainerPadding: 1rem;
     --projectCardContainerWidth: 90%;
+    --tiktokLogoSizeMobile: 100px;
 
     /*Contact Section*/
     --contactSectionRowGap: 1rem;
     --contactSectionPadding: 1rem;
     --formBorderRadius: 5px;
     --formPaddingTB: 2rem;
+    --formPaddingTBMobile: 1rem;
     --formPaddingLR: 10rem;
+    --formPaddingLRMobile: 2rem;
     --inputBorderRadius: 2px;
     --submitBtnPadding: 0.8rem;
     --submitBtnBorderRadius: 5px;
@@ -156,7 +160,7 @@ h3, .navOption {
 h4 {
     font-size: var(--h4fontSize);
 }
-p, li, address, aside, #darkmodeText, output, button, input, output, textarea {
+p, li, address, aside, #darkmodeText, output, button, input, output, textarea, label {
     font-size: var(--pfontSize);
 }
 
@@ -387,28 +391,24 @@ body.darkmode {
     h4 {
         font-size: var(--h4fontSizeMobile);
     }
-    p, li, address, aside, #darkmodeText, output {
+    p, li, address, aside, #darkmodeText, output, button, input, output, textarea, label {
         font-size: var(--pfontSizeMobile);
     }
-
-    .brands {
-        padding: 15px;
+    .navOption {
+        padding: 0 var(--navOptionPaddingMobile);
     }
 
-    #myNavMenu ul li {
-        padding: 10px 15px;
+    #projectcard-container p {
+        font-size: var(--pfontSizeMobile);
     }
-    #myNavMenu ul li:hover {
-        padding: 10px 50px;
+    #tiktokLogo {
+        width: var(--tiktokLogoSizeMobile);
+        height: var(--tiktokLogoSizeMobile);
+    }
+    form{
+        padding:var(--formPaddingTBMobile) var(--formPaddingLRMobile);
     }
 
-    form {
-        padding:15px;
-    }
-
-    #submitBtn {
-        padding: 10px;
-    }
 }
 
 /* Tablets / Small Laptops */
@@ -436,9 +436,6 @@ body.darkmode {
     }
     #myNavMenu ul li:hover {
         padding: 10px 100px;
-    }
-    .brands {
-        width: 100px;
     }
     form {
         padding:25px;
