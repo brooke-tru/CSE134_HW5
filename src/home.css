@@ -7,6 +7,8 @@
     --libertyBlue: rgb(92,99,164);
     --thistlePink: color-mix(in srgb, beige, rgb(222 193 219));
     --bleuDeFrance: color(srgb 0.18 0.5 0.89);
+    --darkModeBgColor: rgb(46, 42, 42);
+    --darkModePColor: #f7e8ea;
 
     /*Header sizing*/
     --headerWidth: 100vw;
@@ -137,16 +139,6 @@
     padding-bottom: var(--headerPaddingBottom);
 }
 
-#darkmode {
-    height: var(--darkModeHeight);
-    width: var(--darkModeWidth);
-}
-
-.darkmode {
-    background-color: black;
-    color:var(--parrotPink);
-}
-
 h1 {
     padding-top: 2rem;
     color: var(--libertyBlue, black);
@@ -236,10 +228,18 @@ p, li, address, aside, #darkmodeText, output, button, input, output, textarea {
     color: var(--darkPink, black);
     padding: var(--aboutMePadding);
 }
-#aboutMeSection p {
+#aboutMeSection p.lightmode {
     padding: var(--aboutMePadding);
     color: black;
 }
+p.darkmode {
+    color: var(--darkModePColor);
+}
+
+#statistics-list{
+    list-style-type: none;
+}
+
 #aboutMeSection ul li {
     padding: var(--aboutMePadding);
 }
@@ -304,6 +304,10 @@ button.loadBtns:hover {
     grid-area: header;
 }
 
+a.darkmode {
+    color: var(--bleuDeFrance);
+}
+
 form {
     grid-area: form;
     border: solid;
@@ -363,6 +367,11 @@ fieldset {
   }
 
 
+/*Dark Mode*/
+body.darkmode {
+    background-color: var(--darkModeBgColor);
+    color:var(--parrotPink);
+}
 
 /* Mobile (Phones) */
 @media (max-width: 600px) {
