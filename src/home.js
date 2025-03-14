@@ -96,19 +96,26 @@ submitBtn.addEventListener("click", function (event) {
 
 
 /*Dark Mode*/
-const body = document.body;
 const darkmodeToggle = document.getElementById("darkmodeToggle");
 const darkmodeText = document.querySelector("label[for=darkmodeToggle]");
 const theme = localStorage.getItem("theme");
+const lightModeElements = document.getElementsByClassName("lightmode");
+const darkModeElements = document.getElementsByClassName("darkmode");
+
+function toggleClass(elements, oldClass, newClass) {
+    Array.from(elements).forEach(element => {
+        element.classList.replace(oldClass, newClass);
+    });
+}
 
 if (theme){
     if (theme === "darkmode") {
-        body.classList.replace('lightmode', 'darkmode');
+        toggleClass(lightModeElements, 'lightmode', 'darkmode');
         darkmodeText.textContent = 'Disable Dark Mode';
         darkmodeToggle.checked = true;
     } 
     else {
-        body.classList.replace('darkmode', 'lightmode');
+        toggleClass(darkModeElements, 'darkmode', 'lightmode');
         darkmodeText.textContent = 'Enable Dark Mode';
         darkmodeToggle.checked = false;
     }
@@ -118,10 +125,10 @@ darkmodeToggle.addEventListener('change', function() {
     let newTheme = this.checked ? "darkmode" : "lightmode";
     localStorage.setItem("theme", newTheme);
     if (this.checked) {
-        body.classList.replace('lightmode', 'darkmode');
+        toggleClass(lightModeElements, 'lightmode', 'darkmode');;
         darkmodeText.textContent = 'Disable Dark Mode';
     } else {
-        body.classList.replace('darkmode', 'lightmode');
+        toggleClass(darkModeElements, 'darkmode', 'lightmode');
         darkmodeText.textContent = 'Enable Dark Mode';
     }
 });
